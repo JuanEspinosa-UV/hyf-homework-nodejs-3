@@ -2,10 +2,19 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const list = [];
+let list = [];
 
 app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/users', (req,res) =>  res.json( list ));
 
+app.get('/user/:id', (req,res) => {     
+    const user = list.find(usr => usr.id == req.params.id);
+    res.json(user);
+});
 
-app.listen(port, () => console.log('Server is listening on port ${port}'))
+app.post('/user', (req,res) => {         
+    list.push({id: 0}); 
+    res.json(list);
+});
+
+app.listen(port, () => console.log('Server is listening on port ',port));
