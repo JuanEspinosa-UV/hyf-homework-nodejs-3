@@ -5,7 +5,6 @@ const port = 3000;
 const list = [];
 
 app.get('/', (req, res) => res.send('Hello World!'));
-
 app.get('/users', (req,res) =>  res.json( list ));
 
 app.post('/users', (req,res) => {
@@ -18,4 +17,4 @@ app.get('/user/:id', (req,res) => {
     res.json(user)
 });
 
-app.listen(port, () => console.log('Server is listening on port ${port}'))
+app.listen(port, () => console.log('Server is listening on port ',port));
