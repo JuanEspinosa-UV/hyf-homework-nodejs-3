@@ -7,7 +7,7 @@ let list = [];
 app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/users', (req,res) =>  res.json( list ));
 
-app.post('/users', (req,res) => {
+app.post('/user', (req,res) => {
     list.push({id:0});
     res.json(user);
 });
