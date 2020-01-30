@@ -17,4 +17,5 @@ app.post('/user', (req,res) => {
     res.json(list);
 });
 
+
 app.listen(port, () => console.log('Server is listening on port ',port));
