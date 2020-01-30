@@ -17,5 +17,7 @@ app.get('/user/:id', (req,res) => {
     const user = list.find(usr => usr.id === req.params.id);
     res.json(user)
 });
+app.get('/users', (req,res) =>  res.json( list ));
+
 
 app.listen(port, () => console.log('Server is listening on port ${port}'))
