@@ -13,7 +13,7 @@ app.post('/users', (req,res) => {
     res.json(user);
 });
 
-app.get('/users/:id', (req,res) => {
+app.get('/user/:id', (req,res) => {
     const user = list.find(usr => usr.id === req.params.id);
     res.json(user)
 });
